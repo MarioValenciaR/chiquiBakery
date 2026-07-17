@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiqui Bakery - Contacto</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff7f0;
+      color: #3b2a22;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      color: #c96b3c;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      width: 100%;
+      background: #c96b3c;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 17px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ad5730;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Chiqui Bakery</h1>
+    <p>Envíanos tu mensaje</p>
+
+    <form action="https://formsubmit.co/iaivalencia@hotmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde Chiqui Bakery" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <label for="name">Nombre</label>
+      <input type="text" id="name" name="Nombre" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="Correo" required />
+
+      <label for="phone">Teléfono</label>
+      <input type="tel" id="phone" name="Telefono" />
+
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="Mensaje" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </div>
+</body>
+</html>
