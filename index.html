@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Chiqui Bakery | Mexican Bakery in Ottawa</title>
   <meta name="description" content="Chiqui Bakery is a Mexican bakery in Ottawa offering conchas, tres leches, alfajores, coffee, breakfast and custom orders." />
 
@@ -50,7 +51,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255, 246, 236, 0.92);
+      background: rgba(255, 246, 236, 0.94);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(58, 36, 28, 0.08);
     }
@@ -110,13 +111,6 @@
       box-shadow: 0 18px 35px rgba(184, 79, 61, 0.3);
     }
 
-    .btn.secondary {
-      background: transparent;
-      color: var(--terracotta);
-      border: 1px solid rgba(184, 79, 61, 0.35);
-      box-shadow: none;
-    }
-
     .hero {
       min-height: 88vh;
       display: grid;
@@ -125,7 +119,7 @@
         linear-gradient(rgba(58, 36, 28, 0.35), rgba(58, 36, 28, 0.55)),
         url("./images/store.jpeg");
       background-size: cover;
-      background background-position: center;
+      background-position: center;
       color: var(--white);
     }
 
@@ -162,12 +156,6 @@
       margin: 22px 0 30px;
       font-size: 19px;
       color: rgba(255, 255, 255, 0.92);
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
     }
 
     section {
@@ -219,15 +207,15 @@
       box-shadow: 0 26px 70px rgba(58, 36, 28, 0.18);
     }
 
-.product img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center;
-}
+    .product img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center;
+    }
 
     .product-content {
-      padding: 20px;
+      padding: 22px;
     }
 
     .product h3 {
@@ -238,6 +226,22 @@
     .product p {
       margin: 0;
       color: var(--coffee);
+    }
+
+    .product-order {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 11px 18px;
+      border-radius: var(--radius);
+      background: var(--terracotta);
+      color: var(--white);
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .product-order:hover {
+      transform: translateY(-2px);
+      background: #9f327b;
     }
 
     .feature-band {
@@ -267,40 +271,53 @@
       color: rgba(255, 255, 255, 0.86);
     }
 
+    #about {
+      background: linear-gradient(180deg, var(--cream), #fffaf5);
+    }
+
     .split {
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
-      gap: 34px;
+      gap: 36px;
       align-items: start;
     }
 
-    .info-panel {
+    .info-panel,
+    form {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px;
+      padding: 34px;
       box-shadow: var(--soft-shadow);
     }
 
-    .info-panel h2 {
-      margin: 0 0 16px;
+    .info-panel h2,
+    form h2 {
+      margin: 0 0 12px;
       color: var(--terracotta);
       font-size: 36px;
       line-height: 1.1;
     }
 
+    .info-panel p,
+    form p {
+      margin: 0 0 24px;
+      color: var(--coffee);
+    }
+
     .info-list {
       display: grid;
-      gap: 12px;
+      gap: 0;
       margin-top: 22px;
     }
 
     .info-item {
-      padding: 14px 0;
+      padding: 18px 0;
       border-bottom: 1px solid rgba(58, 36, 28, 0.12);
     }
 
     .info-item:last-child {
       border-bottom: 0;
+      padding-bottom: 0;
     }
 
     .info-item span {
@@ -313,16 +330,19 @@
     }
 
     .info-item strong {
+      display: block;
       font-size: 18px;
+      margin-top: 2px;
     }
-    
+
     .map-box {
       margin-top: 16px;
       width: 100%;
-      height: 260px;
+      height: 280px;
       border-radius: var(--radius);
       overflow: hidden;
       border: 1px solid rgba(58, 36, 28, 0.12);
+      background: var(--vanilla);
     }
 
     .map-box iframe {
@@ -332,27 +352,17 @@
     }
 
     form {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--soft-shadow);
+      max-width: 760px;
+      width: 100%;
     }
 
-    form h2 {
-      margin: 0 0 8px;
-      color: var(--terracotta);
-      font-size: 34px;
-      line-height: 1.1;
-    }
-
-    form p {
-      margin: 0 0 22px;
-      color: var(--coffee);
+    .form-intro {
+      margin-bottom: 8px;
     }
 
     label {
       display: block;
-      margin: 14px 0 6px;
+      margin: 16px 0 6px;
       font-weight: 800;
       font-size: 14px;
     }
@@ -363,35 +373,37 @@
       width: 100%;
       border: 1px solid rgba(58, 36, 28, 0.16);
       border-radius: var(--radius);
-      padding: 13px 14px;
+      padding: 14px;
       background: #fffdf9;
       color: var(--chocolate);
       font-size: 16px;
       outline: none;
-      transition: border 0.2s ease, box-shadow 0.2s ease;
+      transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: var(--coral);
-      box-shadow: 0 0 0 4px rgba(228, 111, 93, 0.15);
+      border-color: var(--terracotta);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(235, 122, 192, 0.16);
     }
 
     textarea {
-      min-height: 125px;
+      min-height: 150px;
       resize: vertical;
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 16px;
     }
 
     .submit {
       width: 100%;
-      margin-top: 18px;
+      margin-top: 22px;
+      padding: 15px 18px;
     }
 
     footer {
@@ -441,7 +453,16 @@
       }
 
       .product img {
-        height: 220px;
+        height: 280px;
+      }
+
+      .info-panel,
+      form {
+        padding: 26px;
+      }
+
+      .map-box {
+        height: 240px;
       }
     }
   </style>
@@ -486,18 +507,20 @@
 
         <div class="grid products">
           <article class="product reveal">
-            <img src="./images/breadAndHand.jpeg" alt="bread sweet bread" />
+            <img src="./images/breadAndHand.jpeg" alt="Pan dulce from Chiqui Bakery" />
             <div class="product-content">
               <h3>Pan Dulce</h3>
               <p>Conchas, polvorones, cookies and sweet breads baked fresh.</p>
+              <a class="product-order" href="#contact">Order</a>
             </div>
           </article>
 
           <article class="product reveal">
-            <img src="./images/cake.jpeg" alt="Tres leches cake slice" />
+            <img src="./images/cake.jpeg" alt="Tres leches cake from Chiqui Bakery" />
             <div class="product-content">
               <h3>Cakes & Desserts</h3>
               <p>Tres leches, chocoflan, alfajores and custom treats for special days.</p>
+              <a class="product-order" href="#contact">Order</a>
             </div>
           </article>
 
@@ -506,6 +529,7 @@
             <div class="product-content">
               <h3>Coffee & Drinks</h3>
               <p>Cafe de olla, lattes, horchata, aguas frescas and seasonal drinks.</p>
+              <a class="product-order" href="#contact">Order</a>
             </div>
           </article>
         </div>
@@ -540,19 +564,20 @@
             catering, cakes or larger requests, send us a message and we will reply as soon as possible.
           </p>
 
-          <div class="info-item">
-            <span>Location</span>
-            <strong>Chiqui Bakery · Ottawa, Ontario</strong>
+          <div class="info-list">
+            <div class="info-item">
+              <span>Location</span>
+              <strong>Chiqui Bakery · Ottawa, Ontario</strong>
 
-            <div class="map-box">
-              <iframe
-                src="https://www.google.com/maps?q=Chiqui%20Bakery%20Ottawa&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen>
-              </iframe>
+              <div class="map-box">
+                <iframe
+                  src="https://www.google.com/maps?q=Chiqui%20Bakery%20Ottawa&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen>
+                </iframe>
+              </div>
             </div>
-          </div>
 
             <div class="info-item">
               <span>Instagram</span>
@@ -568,11 +593,12 @@
 
         <form id="contact" class="reveal" action="https://formsubmit.co/iaivalencia@hotmail.com" method="POST">
           <h2>Send us a message</h2>
-          <p>For custom cakes, wholesale, events or general questions.</p>
+          <p class="form-intro">For custom cakes, wholesale, events or general questions.</p>
 
           <input type="hidden" name="_subject" value="New inquiry from Chiqui Bakery website" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://chiquibakery.ca/gracias.html" />
 
           <div class="form-row">
             <div>

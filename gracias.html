@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Thank You | Chiqui Bakery</title>
+
+  <style>
+    :root {
+      --cream: #fff6ec;
+      --terracotta: #eb7ac0;
+      --chocolate: #3a241c;
+      --coffee: #6f4433;
+      --white: #ffffff;
+      --soft-shadow: 0 20px 60px rgba(58, 36, 28, 0.14);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--chocolate);
+      padding: 24px;
+    }
+
+    .card {
+      max-width: 620px;
+      width: 100%;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 42px;
+      text-align: center;
+      box-shadow: var(--soft-shadow);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: var(--terracotta);
+      font-size: 42px;
+    }
+
+    p {
+      margin: 0 0 26px;
+      color: var(--coffee);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: var(--radius);
+      background: var(--terracotta);
+      color: var(--white);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: #9f327b;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>Thank you!</h1>
+    <p>
+      We received your message. We will get back to you as soon as possible.
+    </p>
+    <a href="https://chiquibakery.ca/">Back to Chiqui Bakery</a>
+  </main>
+</body>
+</html>
